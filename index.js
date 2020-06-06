@@ -7,12 +7,9 @@ try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
   const dir = __dirname;
-  io.mkdirP('path/to/make').then(() => {
-    console.log("Successfully created path");
-  }).catch(err => console.log(err));
   console.log(`Dirname outside promise: ${__dirname}`);
   console.log(`Execute ls`);
-  exec.exec('ls').then(() => {
+  exec.exec('pwd').then(() => {
     exec.exec('npm version patch -m \"Automatic bump to %s\"').then(() => {
       console.log(`Hello there you, ${nameToGreet}!!!`);
       const time = (new Date()).toTimeString();
