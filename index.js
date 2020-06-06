@@ -8,9 +8,9 @@ try {
   const nameToGreet = core.getInput('who-to-greet');
   const dir = __dirname;
   io.mkdirP('path/to/make').then(() => {
-
+    console.log("Successfully created path");
   }).catch(err => console.log(err));
-  exec.exec('test.sh').then(() => {
+  exec.exec('echo Tesst').then(() => {
     console.log(`Hello there you, ${nameToGreet}!!!`);
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
