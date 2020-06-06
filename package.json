@@ -1,6 +1,6 @@
 {
   "name": "deholde-npm-semantic-version-action",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "This github action bumps the version of your node application and writes the version back to the package.json",
   "main": "index.js",
   "scripts": {
