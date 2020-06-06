@@ -1,0 +1,23 @@
+{
+  "name": "deholde-npm-semantic-version-action",
+  "version": "1.0.0",
+  "description": "This github action bumps the version of your node application and writes the version back to the package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dholde/npm-semantic-version-action.git"
+  },
+  "keywords": [
+    "github-action",
+    "semantic-version"
+  ],
+  "author": "Denis Holdeew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dholde/npm-semantic-version-action/issues"
+  },
+  "homepage": "https://github.com/dholde/npm-semantic-version-action#readme"
+}
