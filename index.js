@@ -10,14 +10,18 @@ try {
   io.mkdirP('path/to/make').then(() => {
     console.log("Successfully created path");
   }).catch(err => console.log(err));
-  exec.exec('npm version patch -m \"Automatic bump to %s\"').then(() => {
-    console.log(`Hello there you, ${nameToGreet}!!!`);
-    const time = (new Date()).toTimeString();
-    core.setOutput("time", time);
-    // Get the JSON webhook payload for the event that triggered the workflow
-    const payload = JSON.stringify(github.context.payload, undefined, 2);
-    console.log(`The event payload: ${payload}`);
-  }).catch(err => console.log(err));
+  console.log(`Dirname outside promise: ${__dirname}`);
+  console.log(`Execute ls`);
+  exec.exec('ls').then(() => {
+    exec.exec('npm version patch -m \"Automatic bump to %s\"').then(() => {
+      console.log(`Hello there you, ${nameToGreet}!!!`);
+      const time = (new Date()).toTimeString();
+      core.setOutput("time", time);
+      // Get the JSON webhook payload for the event that triggered the workflow
+      const payload = JSON.stringify(github.context.payload, undefined, 2);
+      console.log(`The event payload: ${payload}`);
+    }).catch(err => console.log(err));
+  }).catch(err => console.log(err));;
 } catch (error) {
   core.setFailed(error.message);
 }
