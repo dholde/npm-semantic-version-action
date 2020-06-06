@@ -4,7 +4,8 @@
 
 ### Eclipse ###
 .metadata
-bin/
+##Is needed by github actions as node_modules has bin folders
+#bin/
 tmp/
 *.tmp
 *.bak
