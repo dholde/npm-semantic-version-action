@@ -10,7 +10,7 @@ try {
   io.mkdirP('path/to/make').then(() => {
     console.log("Successfully created path");
   }).catch(err => console.log(err));
-  exec.exec('echo Tesst').then(() => {
+  exec.exec('npm version patch -m \"Automatic bump to %s\"').then(() => {
     console.log(`Hello there you, ${nameToGreet}!!!`);
     const time = (new Date()).toTimeString();
     core.setOutput("time", time);
