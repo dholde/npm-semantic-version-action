@@ -210,7 +210,8 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+## This is included since github actions need all packages must be included
+# node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
