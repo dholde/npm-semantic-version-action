@@ -6,7 +6,7 @@ try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet');
   const dir = __dirname;
-  await exec.exec(`${dir}/test`);
+  exec.exec(`${dir}/test`);
   console.log(`Hello there you, ${nameToGreet}!!!`);
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
