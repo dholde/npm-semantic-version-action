@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/dholde/npm-semantic-version-action/issues"
   },
-  "homepage": "https://github.com/dholde/npm-semantic-version-action#readme"
+  "homepage": "https://github.com/dholde/npm-semantic-version-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^3.0.0"
+  }
 }
